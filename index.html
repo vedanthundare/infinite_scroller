@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        background-color: black;
+      }
+        #scroller{
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        #scroller-in{
+            display: inline-block;
+            white-space: nowrap;
+            animation-name: scroll;
+            animation-duration: 35s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            
+        }
+        #scroller::-webkit-scrollbar{
+            display: none;
+        }
+        #scroller h2{
+            display: inline-block;
+            font-size: 140px;
+            font-weight: 900;
+            margin-right: 100px;
+            -webkit-text-stroke: 3px blueviolet;
+            color: transparent;
+        }
+        @keyframes scroll {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+            
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="scroller">
+      <div id="scroller-in">
+        <h2>STUDENT</h2>
+        <h2>WEB DEVELOPER</h2>
+        <h2>IETE (member)</h2>
+        <h2>CODE-AI (Tech lead)</h2>
+      </div>
+      <div id="scroller-in">
+        <h2>STUDENT</h2>
+        <h2>WEB DEVELOPER</h2>
+        <h2>IETE (member)</h2>
+        <h2>CODE-AI (Tech lead)</h2>
+      </div>
+    </div>
+  </body>
+</html>
